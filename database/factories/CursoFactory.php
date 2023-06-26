@@ -22,7 +22,9 @@ class CursoFactory extends Factory
     public function definition(): array
     {
         return [
-
+            'name' => fake()->sentence(),
+            'description' => fake()->paragraph(),
+            'category' => fake()->randomElement(['Desarrollo Web','Diseño Web'])
         ];
     }
 }
