@@ -8,14 +8,14 @@ $(function () {
         format: 'dd-mm-yyyy',
         todayHighlight: true
     }).datepicker('update', '30-10-2021');
-    
+
     $("#date2-datepicker").datepicker({
         autoclose: true,
         format: 'dd-mm-yyyy',
         todayHighlight: true
     }).datepicker('update', '');
 
-    
+
     $("#date3-datepicker").datepicker({
         autoclose: true,
         format: 'dd-mm-yyyy',
@@ -68,7 +68,7 @@ select2StatusSearch();
 function selectClient(client) {
     if (!client.id) { return client.text; }
     var $client = $(
-        '<span><img src="../assets/images/users/' + client.element.value.toLowerCase() + '.jpg" class="rounded-circle avatar-sm ms-1" /> '
+        '<span><img src="{{ asset('images/users/' + client.element.value.toLowerCase() + '.jpg" class="rounded-circle avatar-sm ms-1" /> '
         + client.text + '</span>'
     );
     return $client;

@@ -37,7 +37,7 @@ $(document).on("ready",function(){
         interval: 3000,
     })
 });
-    
+
     var owl = $('.testimonial-owl-carousel2');
     owl.owlCarousel({
         margin: 25,
@@ -252,15 +252,15 @@ window.addEventListener('scroll', reveal);
 
 function reveal(){
     var reveals = document.querySelectorAll('.reveal');
-  
+
     for(var i = 0; i < reveals.length; i++){
-  
+
       var windowHeight = window.innerHeight;
       var cardTop = reveals[i].getBoundingClientRect().top;
       var cardRevealPoint = 150;
-  
+
     //   console.log('condition', windowHeight - cardRevealPoint)
-  
+
       if(cardTop < windowHeight - cardRevealPoint){
         reveals[i].classList.add('active');
       }
@@ -269,7 +269,7 @@ function reveal(){
       }
     }
   }
-  
+
 reveal();
 
 
@@ -329,7 +329,7 @@ $('#myonoffswitch24').on('click', function () {
         $("html[lang=en]").attr("dir", "rtl");
         $('body').removeClass('ltr');
         $("head link#style").attr("href", $(this));
-        (document.getElementById("style").setAttribute("href", "../assets/plugins/bootstrap/css/bootstrap.rtl.min.css"));
+        (document.getElementById("style").setAttribute("href", "{{ asset('plugins/bootstrap/css/bootstrap.rtl.min.css"));
         var carousel = $('.owl-carousel');
         $.each(carousel, function (index, element) {
             // element == this
@@ -353,7 +353,7 @@ $('#myonoffswitch23').on('click', function () {
         $("html[lang=en]").attr("dir", "ltr");
         $('body').removeClass('rtl');
         $("head link#style").attr("href", $(this));
-        (document.getElementById("style").setAttribute("href", "../assets/plugins/bootstrap/css/bootstrap.min.css"));
+        (document.getElementById("style").setAttribute("href", "{{ asset('plugins/bootstrap/css/bootstrap.min.css"));
         var carousel = $('.owl-carousel');
         $.each(carousel, function (index, element) {
             // element == this
@@ -392,7 +392,7 @@ $('#myonoffswitch23').on('click', function () {
         }
     });
     // DARK THEME END
-    
+
     $(document).on('click', '[data-bs-toggle="sidebar"]', function (event) {
         event.preventDefault();
         $('.app').toggleClass('sidenav-toggled');
@@ -401,7 +401,7 @@ $('#myonoffswitch23').on('click', function () {
     if (window.innerWidth <= 992) {
         $('body').removeClass('sidenav-toggled');
     }
-    
+
     function landingPageLocalstorage(){
         if(localStorage.getItem("noartl")){
             $('body').addClass('rtl')
@@ -411,7 +411,7 @@ $('#myonoffswitch23').on('click', function () {
         }
     }
     landingPageLocalstorage()
-    
+
 if ($("body").hasClass("rtl")) {
     $('.slick-slider').slick('slickSetOption', 'rtl', true);
     $('#slide-left').removeClass('d-none');
@@ -419,7 +419,7 @@ if ($("body").hasClass("rtl")) {
     $("html[lang=en]").attr("dir", "rtl");
     $('body').removeClass('ltr');
     $("head link#style").attr("href", $(this));
-    (document.getElementById("style").setAttribute("href", "../assets/plugins/bootstrap/css/bootstrap.rtl.min.css"));
+    (document.getElementById("style").setAttribute("href", "{{ asset('plugins/bootstrap/css/bootstrap.rtl.min.css"));
     var carousel = $('.owl-carousel');
     $.each(carousel, function (index, element) {
         // element == this
@@ -436,7 +436,7 @@ if ($("body").hasClass("dark-mode")) {
 
     $('#myonoffswitch2').prop('checked', true);
 }
-})(jQuery); 
+})(jQuery);
 
 // RESET SWITCHER TO DEFAULT
 function resetData() {
@@ -447,7 +447,7 @@ function resetData() {
     $("html[lang=en]").attr("dir", "ltr");
     $('body').removeClass('rtl');
     $("head link#style").attr("href", $(this));
-    (document.getElementById("style").setAttribute("href", "../assets/plugins/bootstrap/css/bootstrap.min.css"));
+    (document.getElementById("style").setAttribute("href", "{{ asset('plugins/bootstrap/css/bootstrap.min.css"));
     var carousel = $('.owl-carousel');
     $.each(carousel, function (index, element) {
         // element == this
@@ -455,7 +455,7 @@ function resetData() {
         carouselData.settings.rtl = false; //don't know if both are necessary
         carouselData.options.rtl = false;
         $(element).trigger('refresh.owl.carousel');
-    });   
+    });
     $('body').removeClass('dark-mode');
     $('body').addClass('light-mode');
     $('#myonoffswitch3').prop('checked', true);
@@ -471,4 +471,3 @@ function resetData() {
 
 // RTL
 // $('body').addClass('rtl');
-    

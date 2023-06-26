@@ -252,7 +252,7 @@
         // $('body').addClass('sidenav-toggled');
         // if((document.querySelector('body').classList.contains('login-img')) ){
         //     return;
-        // }       
+        // }
         // else if((document.querySelector('body').classList.contains('error-bg'))){
         //     return;
         // }
@@ -266,7 +266,7 @@
         // $('body').addClass('sidenav-toggled');
         // if((document.querySelector('body').classList.contains('login-img')) ){
         //     return;
-        // }       
+        // }
         // else if((document.querySelector('body').classList.contains('error-bg'))){
         //     return;
         // }
@@ -285,7 +285,7 @@
         // $('body').addClass('sidenav-toggled');
         // if((document.querySelector('body').classList.contains('login-img')) ){
         //     return;
-        // }       
+        // }
         // else if((document.querySelector('body').classList.contains('error-bg'))){
         //     return;
         // }
@@ -299,7 +299,7 @@
         // $('body').addClass('sidenav-toggled');
         // if((document.querySelector('body').classList.contains('login-img')) ){
         //     return;
-        // }       
+        // }
         // else if((document.querySelector('body').classList.contains('error-bg'))){
         //     return;
         // }
@@ -308,20 +308,20 @@
         // }
     // HOVER SUBMENU STYLE-1 END
 
-// ----- ! Sidemenu layout Styles ------- //  
+// ----- ! Sidemenu layout Styles ------- //
 
 
 // HEADER POSITION STYLES START
     // $('body').addClass('scrollable-layout');
 // HEADER POSITION STYLES END
 
-// ----- Layout Styles ------- // 
+// ----- Layout Styles ------- //
 
     // BOXED LAYOUT START
         // $('body').addClass('layout-boxed');
     // BOXED LAYOUT END
 
-// ----- ! Layout Styles ------- // 
+// ----- ! Layout Styles ------- //
 
 
 // ----- Header Styles ------- //
@@ -342,7 +342,7 @@
         // $('body').addClass('gradient-header');
     // GRADIENT HEADER END
 
-// ----- ! Header Styles ------- //  
+// ----- ! Header Styles ------- //
 
 // ----- Menu Styles ------- //
 
@@ -411,7 +411,7 @@ if (bodyRtl) {
     $("html[lang=en]").attr("dir", "rtl");
     $('body').removeClass('ltr');
     $("head link#style").attr("href", $(this));
-    (document.getElementById("style").setAttribute("href", "../assets/plugins/bootstrap/css/bootstrap.rtl.min.css"));
+    (document.getElementById("style").setAttribute("href", "{{ asset('plugins/bootstrap/css/bootstrap.rtl.min.css"));
     var carousel = $('.owl-carousel');
     $.each(carousel, function (index, element) {
         // element == this
@@ -461,7 +461,7 @@ let bodyhorizontal = $('body').hasClass('horizontal');
         // $('#slide-left').addClass('d-none');
         // $('#slide-right').addClass('d-none');
         // document.querySelector('.horizontal .side-menu').style.flexWrap = 'wrap'
-       
+
         if (!document.querySelector('body').classList.contains('login-img') && !document.querySelector('body').classList.contains('error-bg')) {
             checkHoriMenu();
             responsive();
@@ -539,7 +539,7 @@ let bodyhorizontal1 = $('body').hasClass('horizontal-hover');
 // ----- Horizontal Hover Style ------- //
 
 
-    
+
 
     // ACCORDION STYLE
     $(document).on("click", '[data-bs-toggle="collapse"]', function () {
@@ -550,7 +550,7 @@ let bodyhorizontal1 = $('body').hasClass('horizontal-hover');
     $(".clickable-row").on('click', function () {
         window.location = $(this).data("href");
     });
-    
+
 
 })(jQuery);
 

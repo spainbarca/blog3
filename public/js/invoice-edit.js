@@ -98,10 +98,10 @@ select2Search();
 
 //select2 client dropdown with search
 function selectClient(client) {
-    
+
     if (!client.id) { return client.text; }
     var $client = $(
-        '<span><img src="../assets/images/users/' + client.element.value.toLowerCase() + '.jpg" class="rounded-circle avatar-sm" /> '
+        '<span><img src="{{ asset('images/users/' + client.element.value.toLowerCase() + '.jpg" class="rounded-circle avatar-sm" /> '
         + client.text + '</span>'
     );
     return $client;

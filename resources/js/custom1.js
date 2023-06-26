@@ -251,7 +251,7 @@
             localStorage.setItem('noalightMode', true);
             localStorage.removeItem('noadarkMode');
 
-            // remove dark theme properties	
+            // remove dark theme properties
             localStorage.removeItem('noadarkPrimary')
 
             // remove light theme properties
@@ -312,7 +312,7 @@
             document.querySelector('html').style.removeProperty('--primary-bg-border', localStorage.darkPrimary);
             document.querySelector('html').style.removeProperty('--dark-primary', localStorage.darkPrimary);
 
-            // removing light theme data 
+            // removing light theme data
             localStorage.removeItem('noaBgImage');
 
             $('#myonoffswitch2').prop('checked', true);
@@ -730,7 +730,7 @@
             responsive();
             sidemenudropdown();
             document.querySelector('.horizontal .side-menu').style.flexWrap = 'nowrap'
-        }   
+        }
         if (window.innerWidth >= 992) {
             let li = document.querySelectorAll('.side-menu li')
             li.forEach((e, i) => {
@@ -823,7 +823,7 @@ $('#myonoffswitch24').on('click', function () {
 
         $('body').removeClass('ltr');
         $("head link#style").attr("href", $(this));
-        (document.getElementById("style").setAttribute("href", "../assets/plugins/bootstrap/css/bootstrap.rtl.min.css"));
+        (document.getElementById("style").setAttribute("href", "{{ asset('plugins/bootstrap/css/bootstrap.rtl.min.css"));
         var carousel = $('.owl-carousel');
         $.each(carousel, function (index, element) {
             // element == this
@@ -848,7 +848,7 @@ if ($("body").hasClass("rtl")) {
     $("html[lang=en]").attr("dir", "rtl");
     $('body').removeClass('ltr');
     $("head link#style").attr("href", $(this));
-    (document.getElementById("style").setAttribute("href", "../assets/plugins/bootstrap/css/bootstrap.rtl.min.css"));
+    (document.getElementById("style").setAttribute("href", "{{ asset('plugins/bootstrap/css/bootstrap.rtl.min.css"));
     var carousel = $('.owl-carousel');
     $.each(carousel, function (index, element) {
         // element == this
@@ -868,7 +868,7 @@ if ($("body").hasClass("rtl")) {
 $('#myonoffswitch23').on('click', function () {
     if (this.checked) {
         $('body').addClass('ltr');
-        
+
         $(".select2-container").attr("dir", "ltr");
 
         $('#slide-left').removeClass('d-none');
@@ -876,7 +876,7 @@ $('#myonoffswitch23').on('click', function () {
         $("html[lang=en]").attr("dir", "ltr");
         $('body').removeClass('rtl');
         $("head link#style").attr("href", $(this));
-        (document.getElementById("style").setAttribute("href", "../assets/plugins/bootstrap/css/bootstrap.min.css"));
+        (document.getElementById("style").setAttribute("href", "{{ asset('plugins/bootstrap/css/bootstrap.min.css"));
         var carousel = $('.owl-carousel');
         $.each(carousel, function (index, element) {
             // element == this
@@ -1032,19 +1032,19 @@ function checkOptions() {
     if (document.querySelector('body').classList.contains('horizontal-hover')) {
         $('#myonoffswitch111').prop('checked', true);
     }
-    // light header 
+    // light header
     if (document.querySelector('body').classList.contains('header-light')) {
         $('#myonoffswitch6').prop('checked', true);
     }
-    // color header 
+    // color header
     if (document.querySelector('body').classList.contains('color-header')) {
         $('#myonoffswitch7').prop('checked', true);
     }
-    // gradient header 
+    // gradient header
     if (document.querySelector('body').classList.contains('gradient-header')) {
         $('#myonoffswitch20').prop('checked', true);
     }
-    // dark header 
+    // dark header
     if (document.querySelector('body').classList.contains('dark-header')) {
         $('#myonoffswitch8').prop('checked', true);
     }
@@ -1070,7 +1070,7 @@ checkOptions()
 
 // RESET SWITCHER TO DEFAULT
 function resetData() {
-    
+
     $('#myonoffswitch3').prop('checked', true);
     $('#myonoffswitch6').prop('checked', true);
     $('#myonoffswitch1').prop('checked', true);
@@ -1133,7 +1133,7 @@ function resetData() {
     $("html[lang=en]").attr("dir", "ltr");
     $('body').removeClass('rtl');
     $("head link#style").attr("href", $(this));
-    (document.getElementById("style").setAttribute("href", "../assets/plugins/bootstrap/css/bootstrap.min.css"));
+    (document.getElementById("style").setAttribute("href", "{{ asset('plugins/bootstrap/css/bootstrap.min.css"));
     var carousel = $('.owl-carousel');
     $.each(carousel, function (index, element) {
         // element == this
