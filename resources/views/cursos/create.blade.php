@@ -18,7 +18,7 @@
                                 @csrf
                                 <div class="form-group">
                                     <label>Nombre:</label>
-                                    <input class="form-control @error('name') is-invalid @enderror is-valid state-valid" name="name" placeholder="Ingrese el nombre (obligatorio)" required="" type="text"/>
+                                    <input class="form-control @error('name') is-invalid @enderror is-valid state-valid" name="name" placeholder="Ingrese el nombre (obligatorio)" required="" type="text" value="{{old('name')}}"/>
 
                                     @error('name')
                                         <div class="invalid-feedback mt-0">
@@ -28,7 +28,7 @@
                                     <br>
 
                                     <label>Descripción:</label>
-                                    <textarea class="form-control @error('description') is-invalid @enderror is-valid state-valid" name="description" placeholder="Ingrese la descripción (obligatorio)" required="" rows="3"></textarea>
+                                    <textarea class="form-control @error('description') is-invalid @enderror is-valid state-valid" name="description" placeholder="Ingrese la descripción (obligatorio)" required="" rows="3">{{old('description')}}</textarea>
 
                                     @error('description')
                                         <div class="invalid-feedback mt-0">
@@ -38,7 +38,7 @@
                                     <br>
 
                                     <label>Categoría:</label>
-                                    <input class="form-control @error('category') is-invalid @enderror is-valid state-valid" name="category" placeholder="Ingrese la categoría (obligatorio)" required="" type="text">
+                                    <input class="form-control @error('category') is-invalid @enderror is-valid state-valid" name="category" placeholder="Ingrese la categoría (obligatorio)" required="" type="text" value="{{old('category')}}">
 
                                     @error('category')
                                         <div class="invalid-feedback mt-0">
