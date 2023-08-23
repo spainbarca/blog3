@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Curso;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreCursoRequest;
 use App\Http\Requests\UpdateCursoRequest;
 
@@ -13,7 +14,7 @@ class CursoController extends Controller
      */
     public function index()
     {
-        $cursos = Curso::paginate();
+        $cursos = Curso::orderBy('id','desc')->paginate(12);
         return view ('cursos.index', compact('cursos'));
     }
 
@@ -22,15 +23,28 @@ class CursoController extends Controller
      */
     public function create()
     {
-        //
+        return view ('cursos.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreCursoRequest $request)
+    public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'category' => 'required'
+        ]);
+
+        $curso = new Curso();
+        $curso->name=$request->name;
+        $curso->description=$request->description;
+        $curso->category=$request->category;
+
+        $curso->save();
+
+        return redirect()->route('cursos.show', $curso);
     }
 
     /**
@@ -38,7 +52,7 @@ class CursoController extends Controller
      */
     public function show(Curso $curso)
     {
-        //
+        return view ('cursos.show', compact('curso'));
     }
 
     /**
@@ -46,15 +60,20 @@ class CursoController extends Controller
      */
     public function edit(Curso $curso)
     {
-        //
+        return view('cursos.edit', compact('curso'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCursoRequest $request, Curso $curso)
+    public function update(Request $request, Curso $curso)
     {
-        //
+        $curso->name=$request->name;
+        $curso->description=$request->description;
+        $curso->category=$request->category;
+
+        $curso->save();
+        return redirect()->route('cursos.show', $curso);
     }
 
     /**
