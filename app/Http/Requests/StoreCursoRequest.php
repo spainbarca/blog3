@@ -11,7 +11,7 @@ class StoreCursoRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,23 @@ class StoreCursoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|max:10',
+            'description' => 'required|min:10',
+            'category' => 'required'
+        ];
+    }
+
+    public function attributes()
+    {
+        return[
+            'name' => 'nombre del curso',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'description.required' => 'Debe ingresar una descripción del curso',
         ];
     }
 }

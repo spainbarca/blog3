@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Curso;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreCursoRequest;
-use App\Http\Requests\UpdateCursoRequest;
 
 class CursoController extends Controller
 {
@@ -29,13 +28,8 @@ class CursoController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreCursoRequest $request)
     {
-        $request->validate([
-            'name' => 'required|max:10',
-            'description' => 'required|min:10',
-            'category' => 'required'
-        ]);
 
         $curso = new Curso();
         $curso->name=$request->name;
