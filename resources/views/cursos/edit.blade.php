@@ -19,7 +19,7 @@
                                 @method('PUT')
                                 <div class="form-group">
                                     <label>Nombre:</label>
-                                    <input class="form-control @error('name') is-invalid @enderror is-valid state-valid" name="name"  placeholder="Ingrese el nombre (obligatorio)" required="" type="text" value="{{old('name'), $curso->name}}">
+                                    <input class="form-control @error('name') is-invalid @enderror is-valid state-valid" name="name"  placeholder="Ingrese el nombre (obligatorio)" required="" type="text" value="{{old('name', $curso->name)}}">
 
                                     @error('name')
                                         <div class="invalid-feedback mt-0">
@@ -29,7 +29,7 @@
                                     <br>
 
                                     <label>Descripción:</label>
-                                    <textarea class="form-control @error('description') is-invalid @enderror is-valid state-valid" name="description" placeholder="Ingrese la descripción (obligatorio)" required="" rows="3">{{old('description'), $curso->description}}</textarea>
+                                    <textarea class="form-control @error('description') is-invalid @enderror is-valid state-valid" name="description" placeholder="Ingrese la descripción (obligatorio)" required="" rows="3">{{old('description', $curso->description)}}</textarea>
 
                                     @error('description')
                                         <div class="invalid-feedback mt-0">
@@ -39,7 +39,7 @@
                                     <br>
 
                                     <label>Categoría:</label>
-                                    <input class="form-control  @error('category') is-invalid @enderror is-valid state-valid" name="category" value="{{old('category'),$curso->category}}" placeholder="Ingrese la categoría (obligatorio)" required="" type="text">
+                                    <input class="form-control  @error('category') is-invalid @enderror is-valid state-valid" name="category" value="{{old('category',$curso->category)}}" placeholder="Ingrese la categoría (obligatorio)" required="" type="text">
 
                                     @error('category')
                                         <div class="invalid-feedback mt-0">
