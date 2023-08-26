@@ -1,4 +1,5 @@
 @extends('layouts.main')
+@include('partials.nav')
 <div class="container-fluid pt-3">
     <div class="row justify-content-center">
         <div class="col-xl-12 col-md-12">

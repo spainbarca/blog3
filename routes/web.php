@@ -23,3 +23,5 @@ Route::resource('asignaturas', CursoController::class)->parameters(['asignaturas
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::view('nosotros','nosotros')->name('nosotros');

@@ -1,5 +1,5 @@
 @extends('layouts.main')
-
+@include('partials.nav')
 @section('title', 'Curso '. $curso->name )
 
 <div class="container-fluid pt-3">
