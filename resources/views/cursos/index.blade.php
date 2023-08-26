@@ -18,7 +18,7 @@
                                 </a>
                                 <div class="card-body p-0 border border-top-0 br-br-5 br-bl-5">
                                     <div class="p-5 border-bottom">
-                                        <a href="{{ route('cursos.show', $curso->id) }}" class="text-dark blog-title">{{ $curso->name }}</a>
+                                        <a href="{{ route('cursos.show', $curso) }}" class="text-dark blog-title">{{ $curso->name }}</a>
                                         <p class="mb-0 text-muted mt-4">{{ $curso->description }}</p>
                                     </div>
                                     <div class="d-sm-flex p-5 align-items-center">
