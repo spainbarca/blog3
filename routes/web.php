@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CursoController;
+use App\Mail\ContactanosMailable;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +27,10 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::view('nosotros','nosotros')->name('nosotros');
+
+Route::get('contactanos', function(){
+    $correo = new ContactanosMailable;
+    Mail::to('admin@blog3.com')->send($correo);
+
+    return "Mensaje enviado";
+})->name('correo');
