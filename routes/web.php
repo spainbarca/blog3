@@ -28,9 +28,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::view('nosotros','nosotros')->name('nosotros');
 
-Route::get('contactanos', function(){
-    $correo = new ContactanosMailable;
-    Mail::to('admin@blog3.com')->send($correo);
-
-    return "Mensaje enviado";
-})->name('correo');
+Route::get('contactanos',[App\Http\Controllers\ContactanosController::class, 'index'])->name('contactanos.index');
+Route::post('contactanos',[App\Http\Controllers\ContactanosController::class, 'store'])->name('contactanos.store');

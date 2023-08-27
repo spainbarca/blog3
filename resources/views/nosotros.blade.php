@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-header border-bottom d-flex justify-content-between">
 
-                    <div><a href="{{ route('correo') }}"><button type="button" class="btn btn-secondary"><i class="fa fa-envelope me-2"></i>Enviar Datos</button></a></div>
+                    <div><a href="{{ route('contactanos.index') }}"><button type="button" class="btn btn-secondary"><i class="fa fa-envelope me-2"></i>Enviar Datos</button></a></div>
                 </div>
             </div>
         </div>
