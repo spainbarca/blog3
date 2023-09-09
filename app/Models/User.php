@@ -56,4 +56,9 @@ class User extends Authenticatable
     public function setNameAttribute($value){
         $this->attributes['name'] =ucwords(strtolower($value));
     }
+
+    public function profile(){
+        return $this->hasOne(Profile::class);
+        //return $this->hasOne(Profile::class,'user_id','id');
+    }
 }
